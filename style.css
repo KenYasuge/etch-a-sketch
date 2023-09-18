@@ -11,13 +11,12 @@ body{
 }
 .sketch-container{
     background-color: #FFF;
-    width: 480px;
-    height: 480px;
-    border-radius: 1%;
+    width: 500px;
+    height: 500px;
+    border: 1px solid black;
     display: flex;
 }
 .sketch-boxes{
-    width: 60px;
-    height: 60px;
     border: 1px solid black;
+    box-sizing: border-box;
 }
