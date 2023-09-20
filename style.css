@@ -3,20 +3,45 @@
     padding: 0;
 }
 body{
-    background-color: #dddddd;
+    padding-top: 24px;
+    background-color: #4485ff;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    align-items: center;
 }
 
 .sketch-wrapper{
-    width: 100%;
+    min-width: 350px;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    flex-direction: row-reverse;
+    gap: 24px;
+    padding: 24px;
+    background-color: #FFF;
+    border-radius: 3%;
 }
+
+.slider-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+}
+.slider{
+    cursor: pointer;
+    height: 6px;
+}
+
 .sketch-container{
     background-color: #FFF;
-    width: 500px;
-    height: 500px;
-    border: 1px solid black;
+    width: 350px;
+    height: 350px;
+    border: 1px solid gray;
     display: flex;
 }
 .sketch-boxes{
-    border: 1px solid black;
+    border: 1px solid gray;
     box-sizing: border-box;
 }
