@@ -1,5 +1,8 @@
-// Default size = 16px
 makeSketch(16);
+
+const sketchSize = document.querySelector('.slider');
+const sketchContainer = document.querySelector('.sketch-container');
+const clearbtn = document.querySelector('.clearbtn');
 
 // Create x rows, fill with x numbers
 function makeSketch(size){
@@ -11,7 +14,7 @@ function makeSketch(size){
         for (let i = 0; i < size; i++){
             const boxes = document.createElement('div');
             boxes.setAttribute('class', 'sketch-boxes');
-            // Make each box size fill the 500px space
+            // Make each box size fill the 350px space
             let boxSize = 350 / size + 'px';
             boxes.style.width = boxSize;
             boxes.style.height = boxSize;
@@ -21,12 +24,27 @@ function makeSketch(size){
 }
 
 // Get size from slider
-const sketchSize = document.querySelector('.slider');
 sketchSize.addEventListener('input', function(event){
-    const sketchContainer = document.querySelector('.sketch-container');
     const containerDivs = sketchContainer.querySelectorAll('div');
     containerDivs.forEach(containerDivs => containerDivs.remove());
     makeSketch(event.target.value);
+    
+    // Draw on boxes (repeat here because it doesn't work if it is just outside)
+    document.querySelectorAll('.sketch-boxes').forEach(drawNow);
 })
 
 // Draw on boxes
+document.querySelectorAll('.sketch-boxes').forEach(drawNow);
+function drawNow(i){
+    i.addEventListener('mousedown', drawHere)
+    function drawHere(e){
+        e.target.style.backgroundColor = 'black';
+    }
+}
+
+// Clear button
+clearbtn.addEventListener('click', clearAll);
+function clearAll(){
+    const containerDivs = sketchContainer.querySelectorAll('div');
+    containerDivs.forEach(containerDivs => containerDivs.style.backgroundColor = 'white');
+}
