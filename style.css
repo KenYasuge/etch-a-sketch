@@ -2,6 +2,8 @@
     margin: 0;
     padding: 0;
 }
+
+  
 body{
     padding-top: 24px;
     background-color: #4485ff;
@@ -9,20 +11,44 @@ body{
     flex-direction: column;
     gap: 32px;
     align-items: center;
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' version='1.1' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:svgjs='http://svgjs.dev/svgjs' width='1920' height='1080' preserveAspectRatio='none' viewBox='0 0 1920 1080'%3e%3cg mask='url(%26quot%3b%23SvgjsMask1012%26quot%3b)' fill='none'%3e%3crect width='1920' height='1080' x='0' y='0' fill='rgba(41%2c 122%2c 205%2c 1)'%3e%3c/rect%3e%3cpath d='M1192.337783768985 103.94009069361901L1461.3641238537662 146.812536243802 1379.915848247631-76.96476183757076z' fill='rgba(28%2c 83%2c 142%2c 0.4)' class='triangle-float2'%3e%3c/path%3e%3cpath d='M135.816%2c314.304C168.339%2c316.392%2c203.431%2c308.1%2c220.469%2c280.318C238.116%2c251.542%2c231.991%2c214.887%2c214.488%2c186.023C197.67%2c158.289%2c168.243%2c139.986%2c135.816%2c140.715C104.537%2c141.418%2c77.508%2c161.685%2c63.039%2c189.426C49.612%2c215.17%2c53.485%2c245.451%2c68.105%2c270.537C82.608%2c295.423%2c107.071%2c312.459%2c135.816%2c314.304' fill='rgba(28%2c 83%2c 142%2c 0.4)' class='triangle-float1'%3e%3c/path%3e%3cpath d='M466.422%2c1180.045C573.255%2c1176.577%2c657.507%2c1095.807%2c705.654%2c1000.376C748.951%2c914.558%2c737.663%2c816.573%2c692.65%2c731.643C644.005%2c639.861%2c570.296%2c548.411%2c466.422%2c549.003C363.19%2c549.591%2c295.89%2c644.596%2c244.614%2c734.195C193.801%2c822.984%2c153.123%2c925.239%2c198.69%2c1016.831C248.588%2c1117.129%2c354.457%2c1183.679%2c466.422%2c1180.045' fill='rgba(28%2c 83%2c 142%2c 0.4)' class='triangle-float3'%3e%3c/path%3e%3cpath d='M741.0863167275777 813.7717334686889L854.2265341088329 1067.8888223145052 1108.3436229546492 954.7486049332499 995.203405573394 700.6315160874337z' fill='rgba(28%2c 83%2c 142%2c 0.4)' class='triangle-float2'%3e%3c/path%3e%3cpath d='M-19.738%2c984.047C24.307%2c986.038%2c75.141%2c985.492%2c98.276%2c947.959C122.091%2c909.322%2c102.879%2c861.438%2c79.998%2c822.241C57.364%2c783.468%2c25.156%2c746.176%2c-19.738%2c745.791C-65.122%2c745.401%2c-101.399%2c780.311%2c-122.485%2c820.502C-142%2c857.699%2c-142.959%2c902.494%2c-120.613%2c938.063C-99.543%2c971.601%2c-59.305%2c982.258%2c-19.738%2c984.047' fill='rgba(28%2c 83%2c 142%2c 0.4)' class='triangle-float2'%3e%3c/path%3e%3cpath d='M1594.2037052229318 522.5534183305984L1437.1569724766728 428.19022127642546 1374.1355432685427 710.9419189229004z' fill='rgba(28%2c 83%2c 142%2c 0.4)' class='triangle-float1'%3e%3c/path%3e%3c/g%3e%3cdefs%3e%3cmask id='SvgjsMask1012'%3e%3crect width='1920' height='1080' fill='white'%3e%3c/rect%3e%3c/mask%3e%3cstyle%3e %40keyframes float1 %7b 0%25%7btransform: translate(0%2c 0)%7d 50%25%7btransform: translate(-10px%2c 0)%7d 100%25%7btransform: translate(0%2c 0)%7d %7d .triangle-float1 %7b animation: float1 5s infinite%3b %7d %40keyframes float2 %7b 0%25%7btransform: translate(0%2c 0)%7d 50%25%7btransform: translate(-5px%2c -5px)%7d 100%25%7btransform: translate(0%2c 0)%7d %7d .triangle-float2 %7b animation: float2 4s infinite%3b %7d %40keyframes float3 %7b 0%25%7btransform: translate(0%2c 0)%7d 50%25%7btransform: translate(0%2c -10px)%7d 100%25%7btransform: translate(0%2c 0)%7d %7d .triangle-float3 %7b animation: float3 6s infinite%3b %7d %3c/style%3e%3c/defs%3e%3c/svg%3e");
 }
 
 .sketch-wrapper{
-    min-width: 350px;
+    min-width: 300px;
     display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    flex-direction: row-reverse;
-    gap: 24px;
+    flex-direction: column;
+    gap: 12px;
     padding: 24px;
     background-color: #FFF;
     border-radius: 3%;
+    box-shadow:  20px 20px 60px #3a71d9,
+             -20px -20px 60px #4e99ff;
+    
+    /* Glassmorphism*/
+    background: rgba(255, 255, 255, 0.43);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10.4px);
+    -webkit-backdrop-filter: blur(10.4px);
+    border: 1px solid rgba(255, 255, 255, 0.28);
 }
 
+.sketch-container{
+    background-color: #FFF;
+    width: 300px;
+    height: 300px;
+    border: 1px solid gray;
+    display: flex;
+}
+.sketch-boxes{
+    border: 1px solid #dadada;
+    box-sizing: border-box;
+}
+
+.options{
+    display: flex;
+    justify-content: space-evenly;
+}
 .slider-container{
     display: flex;
     flex-direction: column;
@@ -33,15 +59,6 @@ body{
     cursor: pointer;
     height: 6px;
 }
-
-.sketch-container{
-    background-color: #FFF;
-    width: 350px;
-    height: 350px;
-    border: 1px solid gray;
-    display: flex;
-}
-.sketch-boxes{
-    border: 1px solid gray;
-    box-sizing: border-box;
+.clearbtn{
+    width: 60px;
 }

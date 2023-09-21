@@ -3,6 +3,8 @@ makeSketch(16);
 const sketchSize = document.querySelector('.slider');
 const sketchContainer = document.querySelector('.sketch-container');
 const clearbtn = document.querySelector('.clearbtn');
+const raibowbtn = document.querySelector('.raibowbtn');
+let penColor = '#555555';
 
 // Create x rows, fill with x numbers
 function makeSketch(size){
@@ -14,8 +16,8 @@ function makeSketch(size){
         for (let i = 0; i < size; i++){
             const boxes = document.createElement('div');
             boxes.setAttribute('class', 'sketch-boxes');
-            // Make each box size fill the 350px space
-            let boxSize = 350 / size + 'px';
+            // Make each box size fill the 300px space
+            let boxSize = 300 / size + 'px';
             boxes.style.width = boxSize;
             boxes.style.height = boxSize;
             boxesContainer.appendChild(boxes);
@@ -35,11 +37,23 @@ sketchSize.addEventListener('input', function(event){
 
 // Draw on boxes
 document.querySelectorAll('.sketch-boxes').forEach(drawNow);
+let isDown = false;
 function drawNow(i){
-    i.addEventListener('mousedown', drawHere)
+    i.addEventListener('mousedown', function() {
+        isDown = true;
+    })
+    i.addEventListener('mouseup', function() {
+        isDown = false;
+    })
+    i.addEventListener('mousemove', drawHere)
     function drawHere(e){
-        e.target.style.backgroundColor = 'black';
+        if(isDown){
+            e.target.style.backgroundColor = penColor;
+        }
     }
+    sketchContainer.addEventListener('mouseleave', function(){
+        isDown = false;
+    })
 }
 
 // Clear button
@@ -47,4 +61,4 @@ clearbtn.addEventListener('click', clearAll);
 function clearAll(){
     const containerDivs = sketchContainer.querySelectorAll('div');
     containerDivs.forEach(containerDivs => containerDivs.style.backgroundColor = 'white');
-}
+};
